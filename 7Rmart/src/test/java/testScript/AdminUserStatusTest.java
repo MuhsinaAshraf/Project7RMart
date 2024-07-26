@@ -1,12 +1,12 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.AdminUserStatusPage;
@@ -39,8 +39,8 @@ public class AdminUserStatusTest extends Base{
         //assertTrue(isalertmessagedisplayaftersaving,"page is not loaded ");
 		
 		boolean isadminuserpageavailable=adminuserstatus.isAdminHeaderPageLoaded();
-        assertTrue(isadminuserpageavailable,Messages.HEADER_ADMIN_IS_NOT_LOADED);
+        Assert.assertTrue(isadminuserpageavailable,Messages.HEADER_ADMIN_IS_NOT_LOADED);
         boolean isstatusiconloaded=adminuserstatus.isStatusIconVisible();
-        assertTrue(isstatusiconloaded,Messages.STATUS_ICON_IS_NOT_LOADED);
+        Assert.assertTrue(isstatusiconloaded,Messages.STATUS_ICON_IS_NOT_LOADED);
 	}
 }

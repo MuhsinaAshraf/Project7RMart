@@ -1,14 +1,13 @@
 package testScript;
 
 
-import static org.testng.Assert.assertTrue;
-
 import java.awt.AWTException;
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.LoginPage;
@@ -48,7 +47,7 @@ public class ManageTest extends Base {
 		//assertTrue(islistpagedisplayed,"Page is not loaded");
 		
 		boolean isalertmessagedisplayaftersaving=managepage.isAlertMessageDisplayed();
-        assertTrue(isalertmessagedisplayaftersaving,Messages.ALERT_WINDOW_NOT_LOADED);
+        Assert.assertTrue(isalertmessagedisplayaftersaving,Messages.ALERT_WINDOW_NOT_LOADED);
         
 			
 		

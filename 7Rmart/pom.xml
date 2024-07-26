@@ -3,7 +3,7 @@
   <groupId>com.obsqura</groupId>
   <artifactId>7Rmart</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
+ <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -26,42 +26,34 @@
                 </configuration>
             </plugin>
         </plugins>
-</build>
+    </build>
    <dependencies>
-	  <!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-  <dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.16.1</version>
-		</dependency>
-		
-		<dependency>
+ <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.18.1</version>
+</dependency>
+<dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.8.0</version>
+    <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
-		<dependency>
-			<groupId>com.excel</groupId>
-			<artifactId>excelread</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-  
-	   
-	   <dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi-ooxml</artifactId>
-	    <version>5.2.4</version>
+
+  	
+  	<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.4</version>
 	</dependency>
 	<dependency>
-    <groupId>com.aventstack</groupId>
+    <groupId>com.aventstack</groupId>  
     <artifactId>extentreports</artifactId>
     <version>5.0.9</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
 <dependency>
-    <groupId>com.github.javafaker</groupId>
+ <groupId>com.github.javafaker</groupId>
     <artifactId>javafaker</artifactId>
     <version>1.0.2</version>
 </dependency>
@@ -75,6 +67,8 @@
         <artifactId>lombok</artifactId>
         <version>1.18.22</version>
       </dependency>
+
+
 
 	 </dependencies>
 </project>

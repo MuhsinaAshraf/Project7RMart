@@ -1,12 +1,13 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
+import constance.Constants;
 import pages.LoginPage;
 import pages.SearchAdminUserPage;
 import utilities.ExcelUtility;
@@ -16,25 +17,25 @@ public class SearchAdminUserTest extends Base{
 	public void searchAdminUser() throws IOException {
 		//String usernamevalue="admin";
 		//String passwordvalue="admin";
-		String usernamevalue=ExcelUtility.getStringData(1, 0, "Loginpage");
-		String passwordvalue=ExcelUtility.getStringData(1, 1, "Loginpage");
+		String usernamevalue=ExcelUtility.getStringData(1, 0,Constants.LOGIN_PAGE);
+		String passwordvalue=ExcelUtility.getStringData(1, 1,Constants.LOGIN_PAGE);
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserNameOnUserNameField(usernamevalue);
 		loginpage.enterPasswordOnPasswordField(passwordvalue);
 		loginpage.clickOnSignInButton();
 		
-		String name=ExcelUtility.getStringData(1, 0, "SearchAdminUser");
+		String name=ExcelUtility.getStringData(1, 0,Constants.SEARCH_ADMIN_USER);
 		 SearchAdminUserPage searchadminuser=new SearchAdminUserPage(driver);
 		 searchadminuser. clickingAdminUsers();
 		 searchadminuser.clickingSearchField();
 		// waitForElementText(driver, usernamefield , name);
 		searchadminuser.enteringUsername(name);
-		 String nametype=ExcelUtility.getStringData(1, 1, "SearchAdminUser");
+		 String nametype=ExcelUtility.getStringData(1, 1,Constants.SEARCH_ADMIN_USER);
 		searchadminuser.selectingUserTypeField(nametype);
 		 searchadminuser.clickOnSearchButton();
 		 
 		 boolean istabledisplayedbyclickingsearch=searchadminuser.tableDisplayed();
-		 assertTrue(istabledisplayedbyclickingsearch," not displayed");
+		Assert.assertTrue(istabledisplayedbyclickingsearch," not displayed");
 		 
 }
 

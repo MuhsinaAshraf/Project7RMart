@@ -1,12 +1,13 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
+
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.AddAdminUserPage;
@@ -43,7 +44,7 @@ public class AddAdminUserTest extends Base{
 		  adminuserspage.clickingSave();
 		  adminuserspage.alertMessageDisplayAfterSaving();
 		  boolean isMessageDisplayedAfterCreatingadminuserspage=adminuserspage.alertMessageDisplayAfterSaving();
-		  assertTrue(isMessageDisplayedAfterCreatingadminuserspage,Messages.HEADER_ADMIN_USER_NOT_LOADED);
+		  Assert.assertTrue(isMessageDisplayedAfterCreatingadminuserspage,Messages.HEADER_ADMIN_USER_NOT_LOADED);
 	  }
 
 }

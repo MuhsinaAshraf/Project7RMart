@@ -1,12 +1,13 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
+
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.AddSubCategoryPage;
@@ -42,7 +43,7 @@ public class AddSubCategoryTest extends Base{
         //assertTrue(islistsubcategorypageavailable,"page is not loaded ");
 		
 		boolean isalertboxloaded=addsubcategory.isAlertMessageDisplayed();
-		assertTrue(isalertboxloaded,Messages.ALERT_WINDOW_NOT_LOADED);
+		Assert.assertTrue(isalertboxloaded,Messages.ALERT_WINDOW_NOT_LOADED);
 		
 		
 		

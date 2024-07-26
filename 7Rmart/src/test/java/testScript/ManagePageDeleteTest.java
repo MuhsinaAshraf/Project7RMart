@@ -1,12 +1,12 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.LoginPage;
@@ -32,7 +32,7 @@ public class ManagePageDeleteTest extends Base {
 		managepagedelete.deleteField();
 		
 		boolean isalertmessagedisplayaftersaving=managepagedelete.isAlertMessageDisplayed();
-        assertTrue(isalertmessagedisplayaftersaving,Messages.HEADER_LIST_PAGES_IS_NOT_LOADED);
+        Assert.assertTrue(isalertmessagedisplayaftersaving,Messages.HEADER_LIST_PAGES_IS_NOT_LOADED);
 	
 	}
 }

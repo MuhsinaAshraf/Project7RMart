@@ -1,10 +1,10 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.LoginPage;
@@ -31,10 +31,10 @@ public class ManagePageSearchDeleteTest extends Base{
 		//managepagesearchanddelete.searchManagePage();
 		
 		boolean ismanagepageloaded=managepagesearchanddelete.isManagePageLoaded();
-		assertTrue( ismanagepageloaded,Messages.MANAGE_PAGE_IS_NOT_LOADED);
+		Assert.assertTrue( ismanagepageloaded,Messages.MANAGE_PAGE_IS_NOT_LOADED);
 		
 		boolean isalertmessagedisplayaftersaving=managepagesearchanddelete.isAlertMessageDisplayed();
-        assertTrue(isalertmessagedisplayaftersaving,Messages.SEARCH_AND_DELETE_ALERT_PAGE_IS_NOT_LOADED);
+        Assert.assertTrue(isalertmessagedisplayaftersaving,Messages.SEARCH_AND_DELETE_ALERT_PAGE_IS_NOT_LOADED);
 	
 }
 	

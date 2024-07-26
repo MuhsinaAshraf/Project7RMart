@@ -1,4 +1,4 @@
-package baseClass;
+package automation_core;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -29,7 +29,7 @@ public class Base {
 	public FileInputStream file;
 	@BeforeMethod(alwaysRun=true)
 	@Parameters("browser")
-	public void initializeBrowser(@Optional("chrome")String browser) throws Exception
+	public void initializeBrowser(String browser) throws Exception
 	{
 		prop=new Properties();
 		file=new FileInputStream(Constants.CONFIGFILE);

@@ -17,6 +17,7 @@ public class Constants {	//contains path of images, xls file etc
 
 	public static final String MANAGE_PAGES_SEARCH_AND_DELETE = "ManageSearchanaDelete";
 	public static final String CONFIGFILE=System.getProperty("user.dir")+File.separator+"src"+File.separator+"main"+File.separator+"resources"+File.separator+"config.properties";
+	public static final String SEARCH_ADMIN_USER = "SearchAdminUser";
 
 
 	

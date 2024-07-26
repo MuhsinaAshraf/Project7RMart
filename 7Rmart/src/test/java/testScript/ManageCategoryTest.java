@@ -1,12 +1,12 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
- 
-import baseClass.Base;
+
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.LoginPage;
@@ -35,7 +35,7 @@ public class ManageCategoryTest extends Base{
 		 managecategoryupdate.clickOnUpdateBtn();
 		 
 		 boolean is_header_list_categories_loaded=managecategoryupdate.isListCategoriesPageLoaded();
-		 assertTrue(is_header_list_categories_loaded,Messages.HEADER_LIST_CATEGORIES_NOT_LOADED);
+		 Assert.assertTrue(is_header_list_categories_loaded,Messages.HEADER_LIST_CATEGORIES_NOT_LOADED);
 		 
 		 
 }

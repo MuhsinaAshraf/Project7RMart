@@ -1,14 +1,12 @@
 package testScript;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import dataProvider.DataProviders;
@@ -29,7 +27,7 @@ public class LoginTest extends Base
 		loginpage.enterPasswordOnPasswordField(passwordvalue);
 		loginpage.clickOnSignInButton();
 		boolean ishomepageavailable=loginpage.isHomePageLoaded();
-		assertTrue(ishomepageavailable,"page is not loaded when user gives valid credentials ");
+		Assert.assertTrue(ishomepageavailable,"page is not loaded when user gives valid credentials ");
 
 		
 	}
@@ -45,7 +43,7 @@ public class LoginTest extends Base
 		
 		
 		boolean actualresultlogin=loginpage.isHomePageLoaded();
-		assertFalse(actualresultlogin,Messages.LOGIN_WITH_INVALID_CREDENTIALS);
+		Assert.assertFalse(actualresultlogin,Messages.LOGIN_WITH_INVALID_CREDENTIALS);
 	}
 
 }

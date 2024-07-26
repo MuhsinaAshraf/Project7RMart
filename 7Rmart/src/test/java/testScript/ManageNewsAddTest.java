@@ -1,12 +1,12 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.LoginPage;
@@ -35,7 +35,7 @@ public class ManageNewsAddTest extends Base{
 		manageaddnewspage.clickingSave();
 		manageaddnewspage.alertMessageDisplayAfterSaving();
 		boolean is_alert_Displayed_After_Saving=manageaddnewspage. alertMessageDisplayAfterSaving();
-		assertTrue(is_alert_Displayed_After_Saving,Messages.ALERT_MESSAGE_NOT_DISPLAYED);
+		Assert.assertTrue(is_alert_Displayed_After_Saving,Messages.ALERT_MESSAGE_NOT_DISPLAYED);
 		  
 	  }
 

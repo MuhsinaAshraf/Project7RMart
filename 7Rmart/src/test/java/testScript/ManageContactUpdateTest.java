@@ -1,12 +1,12 @@
 package testScript;
 
-import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseClass.Base;
+import automation_core.Base;
 import constance.Constants;
 import constance.Messages;
 import pages.LoginPage;
@@ -49,9 +49,9 @@ public class ManageContactUpdateTest extends Base{
 		managecontactuspage.entersDeliveryLimitField(deliverylimitvalue);
 		managecontactuspage.clickingUpdate();
 		boolean is_header_actionfield_available=managecontactuspage.isListPgeDisplayed();
-		assertTrue(is_header_actionfield_available,Messages.HEADER_CONTACTUS_IS_NOT_LOADED);
+		Assert.assertTrue(is_header_actionfield_available,Messages.HEADER_CONTACTUS_IS_NOT_LOADED);
 		boolean isalertmessagedisplayaftersaving=managecontactuspage.alertMessageDisplayAfterSaving();
-        assertTrue(isalertmessagedisplayaftersaving,Messages.ALERT_PAGE_IS_NOT_LOADED);
+        Assert.assertTrue(isalertmessagedisplayaftersaving,Messages.ALERT_PAGE_IS_NOT_LOADED);
 		
 	}
 	
