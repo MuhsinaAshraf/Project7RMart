@@ -3,7 +3,7 @@ package constance;
 import java.io.File;
 
 public class Constants {	//contains path of images, xls file etc
-	public static final String TESTDATAFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\Testdata.xlsx";
+	public static final String TESTDATAFILE=System.getProperty("user.dir")+"\\src\\test\\resources\\Testdata.xlsx";
 	public static final String TESTDATAFILEIMAGEMANAGEPAGEADD=System.getProperty("user.dir")+"\\src\\test\\resources\\vegetables.jpg";
 	public static final String TESTDATAFILEIMAGEMANAGEPAGESADDING=System.getProperty("user.dir")+"\\src\\main\\resources\\gray-minimal-computer-desktop-screen-digital-device-with-design-space.jpg";
 	public static final String LOGIN_PAGE="LoginPage";
